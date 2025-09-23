@@ -1,0 +1,21 @@
+[scrape]
+# cookie from http://lms.tc.cqupt.edu.cn/.
+cookie = "session=V2-1-a8cc4f45-0a7e-4e52-b5a1-7c5b41a9d80e.MTUzMTIw.1758676025486.zW19R2G_BGjibIzbVO_6aMlrp78"
+
+# can get from the url of the notification api request.
+stuId = "153120"
+
+# the count of the fetched notifications. 
+count = 5
+
+[task]
+cron = "*/5 * * * *"
+
+# check https://nodemailer.com/#example-using-an-ethereal-test-account.
+[email]
+host = "smtp.126.com"
+port = 465
+secure = true
+auth.user = "nebula2021@126.com"
+# if given empty, load from env var $LMS_EMAIL_PASS
+auth.pass = ""

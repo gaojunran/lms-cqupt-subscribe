@@ -1,0 +1,5 @@
+[tasks.serve]
+run = ["bun install --no-cache", "bun run src/index.ts"]
+
+[tools]
+bun = "latest"
