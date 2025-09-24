@@ -36,6 +36,7 @@ async function fetchNotifications(config: Config, transporter: Transporter): Pro
 async function init() {
   const config = parseConfig();
   config.email.auth.pass ||= process.env.LMS_EMAIL_PASS ?? ""
+  config.cloudflare.apiToken ||= process.env.LMS_CF_TOKEN ?? ""
   const notificationAdapter = new JSONFile<Data>('./notifications.json')
   const notificationDb = new Low<Data>(notificationAdapter, {});
   await notificationDb.write();

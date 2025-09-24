@@ -19,3 +19,11 @@ secure = true
 auth.user = "nebula2021@126.com"
 # if given empty, load from env var $LMS_EMAIL_PASS
 auth.pass = ""
+
+# use with https://github.com/jackluson/sync-your-cookie/ to fetch refreshed tokens.
+[cloudflare]
+# if either accountId or namespaceId is empty, will not enable this feature.
+accountId = "d6a25ea4d6adfab372be8f66a7d31a6a"
+namespaceId = "ef95641165cf42ae805f757edaaf6dc3"
+# if given empty, load from env var $LMS_CF_TOKEN
+apiToken = ""

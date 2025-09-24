@@ -28,6 +28,11 @@ export interface Config {
       pass: string;
     };
   };
+  cloudflare: {
+      accountId: string;
+      namespaceId: string;
+      apiToken: string; // (empty string = load from env var $LMS_CF_TOKEN)
+  };
 }
 
 export function parseConfig(): Config {
